@@ -1,0 +1,60 @@
+p,
+body{
+    background-color: white;
+    /*pour s'assurer que nos éléments prennent bien toute la largeur de la page*/
+
+    /*fond dégradé de couleur*/
+    background: linear-gradient(90deg, #8360c3, #2ebf91);
+    margin:0; 
+}
+
+.container{
+    /*permet d'ajouter de l'espace dans notre élément*/
+    padding: 10px;
+
+    border-radius: 40px;
+    box-shadow: 6px 6px 6px #aebbd1;
+
+    /*background-image: url('test.jpg');*/
+
+    /* Opacité de l'image de fond */
+    opacity: 0.8;
+
+    /*Permet de rendre l'image de fond fixe lorsqu'on déroule la page web*/
+    background-attachment: fixed;
+
+    /*Permet de redimensionner l'image afin qu'elle s'adapte à la taille de 
+    l'élément qui la contient*/
+    background-size: cover;
+
+    /*Permet d'indiquer où doit se trouver l'image de fond*/
+    background-position: top right;
+}
+
+h1:hover{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 6px 6px 0px #aebbd1;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.test{
+    /*souligner du texte --> text-decoration*/
+    text-decoration: underline;
+    color: blue;
+}
+
+.test2{
+    /*mettre en gras --> bold | mettre en fin --> thin*/
+    font-weight: bold;
+    color: red;
+    font-style: italic;
+
+
+    /*aggrandir la taille du texte --> relatif = em*/
+    /*relatif à privilégié quand on veut que le texte s'adapte à la taille de l'écran*/
+    font-size:2em;
+}
