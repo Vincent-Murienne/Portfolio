@@ -1,60 +1,112 @@
-p,
-body{
-    background-color: white;
-    /*pour s'assurer que nos éléments prennent bien toute la largeur de la page*/
 
-    /*fond dégradé de couleur*/
-    background: linear-gradient(90deg, #8360c3, #2ebf91);
-    margin:0; 
+/*Nav*/
+
+#menu-deroulant {
+/* on centre le menu dans la page */
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
 }
 
-.container{
-    /*permet d'ajouter de l'espace dans notre élément*/
-    padding: 10px;
+#menu-deroulant li {
+/* on place les liens du menu horizontalement */
+    display: inline-block;
+    padding: 1%;
+    border:3px solid rgb(58, 55, 55);
+}
 
-    border-radius: 40px;
-    box-shadow: 6px 6px 6px #aebbd1;
+#menu-deroulant ul li {
+/* on enlève ce comportement pour les liens du sous menu */
+    display: inherit;
+}
 
-    /*background-image: url('test.jpg');*/
+#menu-deroulant a {
+    text-decoration: none;
+    display: block;
+	color:#ffffff;
+}
+#menu-deroulant ul {
+    position: absolute;
+/* on cache les sous menus complètement sur la gauche */
+    left: -999em;
+    text-align: left;
+    z-index: 1000;
+}
+#menu-deroulant, #menu-deroulant ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
 
-    /* Opacité de l'image de fond */
-    opacity: 0.8;
+#menu-deroulant li:hover ul {
+/* Au survol des li du menu on replace les sous menus */
+    left: auto;
+    padding-top: 1em;
+}
 
-    /*Permet de rendre l'image de fond fixe lorsqu'on déroule la page web*/
-    background-attachment: fixed;
+#menu-deroulant li:hover a {
+    /* Au survol des li du menu on replace les sous menus */
+        /*border:3px solid rgb(255, 255, 255);*/
+        /*background-color: rgb(255, 255, 255);*/
+        color: rgb(255, 255, 255);
+}
 
-    /*Permet de redimensionner l'image afin qu'elle s'adapte à la taille de 
-    l'élément qui la contient*/
+#menu-deroulant a:hover{
+    /* Au survol des li du menu on replace les sous menus */
+        background-color: rgb(13, 119, 146);
+}
+
+nav{
+    width: 100%;
+    position:fixed;
+    top:0;
+    left: 0;
+    height: 38%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    background-image: url("../../assets/img/nav3.png");
     background-size: cover;
-
-    /*Permet d'indiquer où doit se trouver l'image de fond*/
-    background-position: top right;
 }
 
-h1:hover{
+body{
+    background-color:rgb(255, 255, 255);
+}
+.nav p{
+    color: #ffffff;
+    font-size: 2em;
+    margin-top: 3%;
+    font-weight: bolder;
+    text-transform: uppercase;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 6px 6px 0px #aebbd1;
+}
+.nav img{
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    border:3px solid rgb(255, 255, 255);
+    margin-left: 46%;
+    margin-top: 0.5%;
+    width:10em;
+    border-radius: 30%;
+    position:fixed;
 }
 
-h1{
+.main{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    margin-top: 21%;
+}
+
+.main h1{
+    color: #000000;
+    font-size: 3em;
+    margin-top: 1%;
+    font-weight: bolder;
+    text-transform: uppercase;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.test{
-    /*souligner du texte --> text-decoration*/
-    text-decoration: underline;
-    color: blue;
 }
 
-.test2{
-    /*mettre en gras --> bold | mettre en fin --> thin*/
-    font-weight: bold;
-    color: red;
-    font-style: italic;
-
-
-    /*aggrandir la taille du texte --> relatif = em*/
-    /*relatif à privilégié quand on veut que le texte s'adapte à la taille de l'écran*/
-    font-size:2em;
-}
+    
