@@ -82,7 +82,7 @@ const PROJECTS = [
     title: { fr: "DevSecOps CI/CD", en: "DevSecOps CI/CD"},
     desc:  { fr: "Mise en place de pipelines CI/CD pour automatiser la livraison de mon application BeatZone. Sécurisation du cycle de développement par la détection et la correction des vulnérabilités.", en: "Implementation of CI/CD pipelines to automate the delivery of my BeatZone application. Securing the development cycle through vulnerability detection and remediation." },
     tags: ["Microsoft Azure", "Ansible", "Debian + Ubuntu", "Kubernetes", "GitLeaks", "Snyk", "Greenbone", "ZAP Proxy", "SBOM : Syft + Grift", "Vault", "Trivy"], year: 2026, repo: "https://gitlab.com/vmurienne/beatzone",
-    status: "done", icon: "shield", img: null,
+    status: "done", icon: "shield", img: "assets/images/projet/scolaire/beatzone-ci-cd.png",
   },
   {
     id: "s3", cat: "school",
@@ -103,21 +103,21 @@ const PROJECTS = [
     title: { fr: "PRJ_NODE_PSG", en: "PRJ_NODE_PSG" },
     desc:  { fr: "Projet full-stack d’entrainement au technologies (Node.js + MySQL + React + mobile Flutter) conteneurisé avec Docker.", en: "Full-stack training project in technologies (Node.js + MySQL + web client + Flutter mobile) containerized with Docker." },
     tags: ["React", "Flutter + Dart", "TypeScript", "Express", "MySQL", "Docker"], year: 2025, repo: "https://github.com/Vincent-Murienne/PRJ_NODE_PSG",
-    status: "done", icon: "layers", img: "assets/images/projet/scolaire/prj-node-psg.png",
+    status: "done", icon: "layers", img: null,
   },
   {
     id: "s6", cat: "school",
     title: { fr: "NoSQL", en: "NoSQL" },
     desc:  { fr: "Projet pour nous apprendre les bases de MongoDB, Redis et Neo4j via Docker et Python. ELK Stack déployée pour l’analyse et la visualisation de logs et données en temps réel.", en: "This project teaches us the basics of MongoDB, Redis, and Neo4j using Docker and Python. The ELK Stack is deployed for analyzing and visualizing logs and real-time data." },
     tags: ["ELK Stack", "MongoDB", "Redis", "Neo4j", "Docker", "Python"], year: 2025, repo: "https://github.com/Vincent-Murienne/NoSQL",
-    status: "done", icon: "database", img: "assets/images/projet/scolaire/nosql-elk.png",
+    status: "done", icon: "database", img: "assets/images/projet/scolaire/nosql-logo.png",
   },
   {
     id: "s7", cat: "school",
     title: { fr: "Site web : Àirneis, e-commerce", en: "Web site : Àirneis, e-commerce" },
     desc:  { fr: "Àirneis est une marque fictive de meubles développant un site e-commerce international. Le projet inclut un site web avec back-office et une application Android.", en: "Àirneis is a fictional furniture brand developing an international e-commerce site. The project includes a website with a back office and an Android application." },
     tags: ["React", "PHP", "Java + Android Studio", "MySQL", "Stripe"], year: 2024, repo: "https://github.com/Vincent-Murienne/Projet-E-commerce",
-    status: "done", icon: "globe", img: "assets/images/projet/scolaire/e-commerce-airneis.png",
+    status: "done", icon: "globe", img: "assets/images/projet/scolaire/airneis.png",
   },
   {
     id: "s8", cat: "school",

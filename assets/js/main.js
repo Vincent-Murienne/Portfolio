@@ -218,26 +218,50 @@ function projectInitials(title) {
   return words.slice(0, 2).map(w => w[0].toUpperCase()).join("");
 }
 
+function browserBarUrl(p) {
+  const raw = p.live || (p.repo && p.repo !== "#" ? p.repo : null);
+  if (!raw) return "preview";
+  const parts = raw.replace(/^https?:\/\//, "").split("/");
+  return parts.length >= 2 ? `${parts[0]}/${parts[parts.length - 1]}` : parts[0];
+}
+
+function projectCover(p, lang) {
+  if (p.img) {
+    const ctaHref = p.live || (p.repo && p.repo !== "#" ? p.repo : null);
+    const overlay = ctaHref
+      ? `<a href="${ctaHref}" target="_blank" rel="noopener" class="screen-overlay"><span>${i18n.t("projects.view")}</span></a>`
+      : "";
+    return `
+      <div class="browser-mockup">
+        <div class="browser-bar">
+          <div class="browser-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="browser-url">${browserBarUrl(p)}</div>
+        </div>
+        <div class="browser-screen">
+          <img src="${p.img}" alt="${p.title[lang]}" />
+          ${overlay}
+        </div>
+      </div>`;
+  }
+  if (p.icon && ICONS[p.icon]) {
+    const color = CAT_COLORS[p.cat] || "var(--muted-foreground)";
+    return `<div class="project-card-img project-card-cover"><span class="project-cover-icon" style="color:${color}">${ICONS[p.icon]}</span></div>`;
+  }
+  return `<div class="project-card-img project-card-cover"><span class="project-cover-initials">${projectInitials(p.title[lang])}</span></div>`;
+}
+
 function renderProjectCard(p, delay = 0) {
   const lang = i18n.lang;
-  const catLabel = i18n.t(`projects.cat.${p.cat}`);
   const tags = p.tags.map(t => `<span class="badge badge-outline">${t}</span>`).join("");
   const meta = [p.role ? p.role[lang] : null, p.year].filter(Boolean);
-  const links = (p.repo || p.live) ? `
-    <div class="project-links">
-      ${p.repo ? `<a href="${p.repo}" target="_blank" rel="noopener" class="project-link">${ICONS.code2} ${i18n.t("projects.code")}</a>` : ""}
-      ${p.live ? `<a href="${p.live}" target="_blank" rel="noopener" class="project-link">${ICONS.externalLink} ${i18n.t("projects.live")}</a>` : ""}
-    </div>` : "";
-
-  let cover;
-  if (p.img) {
-    cover = `<img src="${p.img}" alt="${p.title[lang]}" class="project-card-img project-card-img--photo" />`;
-  } else if (p.icon && ICONS[p.icon]) {
-    const color = CAT_COLORS[p.cat] || "var(--muted-foreground)";
-    cover = `<div class="project-card-img project-card-cover"><span class="project-cover-icon" style="color:${color}">${ICONS[p.icon]}</span></div>`;
-  } else {
-    cover = `<div class="project-card-img project-card-cover"><span class="project-cover-initials">${projectInitials(p.title[lang])}</span></div>`;
-  }
+  const repoLink = p.repo ? `<a href="${p.repo}" target="_blank" rel="noopener" class="project-link">${ICONS.code2} ${i18n.t("projects.code")}</a>` : "";
+  const liveLink = p.live ? `<a href="${p.live}" target="_blank" rel="noopener" class="project-link">${ICONS.externalLink} ${i18n.t("projects.live")}</a>` : "";
+  const links = (p.repo || p.live) ? `<div class="project-links">${repoLink}${liveLink}</div>` : "";
+  const cover = projectCover(p, lang);
 
   return `
     <div class="fade-in dir-up" data-delay="${delay}">
