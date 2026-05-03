@@ -176,7 +176,7 @@
       // Featured projects — ordre explicite
       const projEl = document.getElementById("featured-projects");
       if (projEl) {
-        const featuredIds = ["s1", "s2", "p1"];
+        const featuredIds = ["s1", "s2", "p2"];
         const featured = featuredIds.map(id => PROJECTS.find(p => p.id === id)).filter(Boolean);
         projEl.innerHTML = featured.map((p, i) => renderProjectCard(p, i * 100)).join("");
       }
