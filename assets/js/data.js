@@ -24,7 +24,7 @@ const PROJECTS = [
   {
     id: "p1", cat: "personal",
     title: { fr: "AI Watcher", en: "AI Watcher" },
-    desc:  { fr: "Outil d’envoi quotidien d’e-mails de veille en IA et cybersécurité, optimisés pour une publication sur LinkedIn.", en: "A tool for sending daily emails on AI and cybersecurity trends, optimized for LinkedIn posting." },
+    desc:  { fr: "Outil d’envoi quotidien d’e-mails de veille en IA et cybersécurité, optimisés pour publier sur LinkedIn.", en: "A tool for sending daily emails on AI and cybersecurity trends, optimized for LinkedIn posting." },
     tags: ["TypeScript", "GitHub Actions"], year: 2026, repo: "https://github.com/Vincent-Murienne/ai-watcher",
     status: "done", icon: "sparkles", img: "assets/images/projet/personnel/ai-watcher.png",
   },
@@ -115,7 +115,7 @@ const PROJECTS = [
   {
     id: "s7", cat: "school",
     title: { fr: "Site web : Àirneis, e-commerce", en: "Web site : Àirneis, e-commerce" },
-    desc:  { fr: "Àirneis est une marque fictive de meubles développant un site e-commerce international. Le projet inclut un site web avec back-office et une application Android.", en: "Àirneis is a fictional furniture brand developing an international e-commerce site. The project includes a website with a back office and an Android application." },
+    desc:  { fr: "Àirneis est une marque fictive de meubles développant un site e-commerce international. Le projet inclut un site web complet avec back-office et une application Android.", en: "Àirneis is a fictional furniture brand developing an international e-commerce site. The project includes a complete website with a back office and an Android application." },
     tags: ["React", "PHP", "Java + Android Studio", "MySQL", "Stripe"], year: 2024, repo: "https://github.com/Vincent-Murienne/Projet-E-commerce",
     status: "done", icon: "globe", img: "assets/images/projet/scolaire/airneis.png",
   },
