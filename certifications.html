@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications — Vincent Murienne</title>
+  <meta name="description" content="Certifications et formations de Vincent Murienne." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script>(function(){var t=localStorage.getItem('theme')||(globalThis.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.classList.toggle('dark',t==='dark')})();</script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="section-hero">
+      <div class="container">
+        <div class="fade-in">
+          <span class="section-eyebrow" data-i18n="certs.eyebrow"></span>
+          <h1 data-i18n="certs.title"></h1>
+          <p class="mt-3 text-muted text-lg max-w-2xl" data-i18n="certs.lead">
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS GRID -->
+    <section class="section-sm pb-20">
+      <div class="container">
+        <div class="grid-3" id="certs-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    globalThis.renderPage = function () {
+      const grid = document.getElementById("certs-grid");
+      if (grid) {
+        grid.innerHTML = CERTIFICATIONS.map((c, i) => renderCertCard(c, i * 60)).join("");
+      }
+      i18n._applyStatic();
+      requestAnimationFrame(initFadeIn);
+    };
+  </script>
+</body>
+</html>

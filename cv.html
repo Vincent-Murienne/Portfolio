@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — Vincent Murienne</title>
+  <meta name="description" content="CV de Vincent Murienne, développeur web full-stack." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script>(function(){var t=localStorage.getItem('theme')||(globalThis.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.classList.toggle('dark',t==='dark')})();</script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="section-hero">
+      <div class="container">
+        <div class="fade-in">
+          <div class="flex items-end justify-between gap-6 flex-wrap">
+            <div>
+              <span class="section-eyebrow" data-i18n="cv.eyebrow"></span>
+              <h1>Curriculum vitæ</h1>
+            </div>
+            <a href="assets/files/CV_Vincent_Murienne.pdf" download title="Télécharger le CV en PDF" class="btn btn-default">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              <span data-i18n="cv.download"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm border-t pb-20">
+      <div class="container">
+        <div class="fade-in cv-pdf-wrapper">
+          <iframe
+            src="assets/files/CV_Vincent_Murienne.pdf"
+            class="cv-pdf-frame"
+            title="CV Vincent Murienne"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    globalThis.renderPage = function () {
+      i18n._applyStatic();
+      requestAnimationFrame(initFadeIn);
+    };
+  </script>
+</body>
+</html>

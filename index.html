@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vincent Murienne — Développeur Web Full-Stack</title>
+  <meta name="description" content="Portfolio de Vincent Murienne, développeur web full-stack. React, Next.js, Node.js, TypeScript." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script>(function(){var t=localStorage.getItem('theme')||(globalThis.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.classList.toggle('dark',t==='dark')})();</script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="section-hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- LEFT -->
+          <div class="fade-in dir-left">
+            <span class="section-eyebrow">
+              <span class="badge-dot"></span>
+              <span data-i18n="hero.available"></span>
+            </span>
+            <h1>
+              <span data-i18n="hero.title.line1"></span><br />
+              <span class="italic font-normal text-muted" data-i18n="hero.title.line2"></span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
+            </p>
+            <div class="hero-ctas">
+              <a href="projects.html" class="btn btn-default btn-lg" id="hero-cta-projects">
+                <span data-i18n="hero.cta.projects"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a href="contact.html" class="btn btn-outline btn-lg">
+                <span data-i18n="hero.cta.contact"></span>
+              </a>
+            </div>
+          </div>
+          <!-- RIGHT -->
+          <div class="hero-img-col fade-in dir-right" data-delay="150">
+            <div class="hero-img-wrap">
+              <div class="hero-avatar">
+                <img src="assets/images/moi.jpg" alt="Vincent Murienne" onerror="this.style.display='none'" />
+              </div>
+              <div class="glass hero-location-badge">
+                <span class="green-dot"></span>Paris, FR
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="fade-in">
+          <span class="section-eyebrow" data-i18n="about.eyebrow"></span>
+          <h2 data-i18n="about.title"></h2>
+          <p class="mt-4 max-w-3xl text-muted" data-i18n="about.p1">
+          </p>
+          <p class="mt-4 max-w-3xl text-muted" data-i18n="about.p2">
+            
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CV ===================== -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="fade-in">
+          <div class="card" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;padding:1.75rem 2rem">
+            <div>
+              <span class="section-eyebrow" data-i18n="cv.eyebrow"></span>
+              <p class="mt-1 text-muted" data-i18n="home.cvLead"></p>
+            </div>
+            <a href="cv.html" class="btn btn-outline" style="white-space:nowrap;flex-shrink:0">
+              <span data-i18n="home.viewCV"></span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STACK ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="fade-in">
+          <span class="section-eyebrow" data-i18n="stack.eyebrow"></span>
+          <h2 data-i18n="stack.title"></h2>
+          <p class="mt-2 text-muted" data-i18n="stack.lead"></p>
+        </div>
+        <div class="stack-grid" id="stack-chips"></div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURED PROJECTS ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="fade-in">
+          <div class="flex items-end justify-between flex-wrap gap-4 mb-10">
+            <div>
+              <span class="section-eyebrow" data-i18n="projects.eyebrow"></span>
+              <h2 data-i18n="projects.featured">s</h2>
+            </div>
+            <a href="projects.html" class="btn btn-ghost" id="view-projects-btn">
+              <span data-i18n="home.viewProjects"></span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="grid-3" id="featured-projects"></div>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATIONS ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="fade-in">
+          <div class="flex items-end justify-between flex-wrap gap-4 mb-10">
+            <div>
+              <span class="section-eyebrow" data-i18n="certs.eyebrow"></span>
+              <h2 data-i18n="certs.recent"></h2>
+              <p class="mt-2 text-muted" data-i18n="home.featuredCertsLead"></p>
+            </div>
+            <a href="certifications.html" class="btn btn-ghost" id="view-certs-btn">
+              <span data-i18n="home.viewCerts"></span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="grid-2" id="featured-certs"></div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="fade-in">
+          <div class="cta-block">
+            <h2 data-i18n="contact.title"></h2>
+            <p data-i18n="contact.lead"></p>
+            <a href="contact.html" class="btn btn-secondary btn-lg" style="margin-top:1.5rem;background:var(--background);color:var(--foreground)">
+              <span data-i18n="hero.cta.contact"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    globalThis.renderPage = function () {
+      const chipsEl = document.getElementById("stack-chips");
+      if (chipsEl) {
+        chipsEl.innerHTML = STACK.map((s, i) => `
+          <div class="fade-in dir-up" data-delay="${i * 40}">
+            <span class="stack-chip">
+              <span class="badge-dot"></span>${s.name}
+            </span>
+          </div>`).join("");
+      }
+
+      // Featured projects — ordre explicite
+      const projEl = document.getElementById("featured-projects");
+      if (projEl) {
+        const featuredIds = ["s1", "s2", "p1"];
+        const featured = featuredIds.map(id => PROJECTS.find(p => p.id === id)).filter(Boolean);
+        projEl.innerHTML = featured.map((p, i) => renderProjectCard(p, i * 100)).join("");
+      }
+
+      // Featured certs
+      const certsEl = document.getElementById("featured-certs");
+      if (certsEl) {
+        certsEl.innerHTML = CERTIFICATIONS.slice(0, 4).map((c, i) => renderCertCard(c, i * 80)).join("");
+      }
+
+      i18n._applyStatic();
+      requestAnimationFrame(initFadeIn);
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Inject PostHog config
+        run: |
+          if [ -n "$POSTHOG_KEY" ]; then
+            sed -i "s|const POSTHOG_KEY = \"\";|const POSTHOG_KEY = \"$POSTHOG_KEY\";|" assets/js/main.js
+            echo "PostHog key injected."
+          else
+            echo "No POSTHOG_KEY secret found — analytics disabled."
+          fi
+          if [ -n "$POSTHOG_HOST" ]; then
+            sed -i "s|const POSTHOG_HOST = \"[^\"]*\";|const POSTHOG_HOST = \"$POSTHOG_HOST\";|" assets/js/main.js
+            echo "PostHog host injected: $POSTHOG_HOST"
+          fi
+        env:
+          POSTHOG_KEY:     ${{ secrets.POSTHOG_KEY }}
+          POSTHOG_HOST:    ${{ secrets.POSTHOG_HOST }}
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

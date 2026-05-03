@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets — Vincent Murienne</title>
+  <meta name="description" content="Projets personnels, professionnels et scolaires de Vincent Murienne." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script>(function(){var t=localStorage.getItem('theme')||(globalThis.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.classList.toggle('dark',t==='dark')})();</script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="section-hero">
+      <div class="container">
+        <div class="fade-in">
+          <span class="section-eyebrow" data-i18n="projects.eyebrow"></span>
+          <h1 data-i18n="projects.title"></h1>
+          <p class="mt-3 text-muted text-lg max-w-2xl" data-i18n="projects.lead">
+          </p>
+          <!-- Sticky category nav -->
+          <nav class="glass cat-nav" aria-label="Catégories">
+            <a href="#personal"      data-i18n="projects.cat.personal"></a>
+            <!-- <a href="#professional"  data-i18n="projects.cat.professional"></a> -->
+            <a href="#school"        data-i18n="projects.cat.school"></a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- DYNAMIC PROJECT SECTIONS -->
+    <div id="projects-content"></div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    const CATS = ["personal", "school"];
+
+    globalThis.renderPage = function () {
+      const total = PROJECTS.length;
+      const lang  = i18n.lang;
+
+      const html = CATS.map(cat => {
+        const list = PROJECTS.filter(p => p.cat === cat);
+        const cards = list.map((p, i) => renderProjectCard(p, i * 80)).join("");
+        const count = String(list.length).padStart(2, "0") + " /" + String(total).padStart(2, "0");
+
+        return `
+          <section id="${cat}" class="section-sm">
+            <div class="container">
+              <div class="fade-in">
+                <div class="flex items-baseline justify-between gap-4 mb-6 pb-4 border-b">
+                  <h2 class="text-2xl" data-i18n="projects.cat.${cat}">${i18n.t("projects.cat." + cat)}</h2>
+                  <span class="font-mono text-sm text-muted">${count}</span>
+                </div>
+              </div>
+              <div class="grid-3">${cards}</div>
+            </div>
+          </section>`;
+      }).join("");
+
+      document.getElementById("projects-content").innerHTML = html;
+      i18n._applyStatic();
+      requestAnimationFrame(initFadeIn);
+    };
+  </script>
+</body>
+</html>
