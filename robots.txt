@@ -1,0 +1,8 @@
+# robots.txt — Vincent Murienne Portfolio
+# https://vincent-murienne.github.io/Portfolio/
+
+User-agent: *
+Allow: /
+
+# Référence au sitemap pour faciliter le crawl
+Sitemap: https://vincent-murienne.github.io/Portfolio/sitemap.xml

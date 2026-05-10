@@ -3,11 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV — Vincent Murienne</title>
-  <meta name="description" content="CV de Vincent Murienne, développeur web full-stack." />
+
+  <!-- ===================== SEO CORE ===================== -->
+  <title>CV — Vincent Murienne | Développeur Web Full-Stack Angular, Java Spring Boot, Node.js, TypeScript</title>
+  <meta name="description" content="Curriculum vitæ de Vincent Murienne, développeur web full-stack basé à Paris. Expériences, formations et compétences en Angular, Java Spring Boot, Node.js et TypeScript. Téléchargeable en PDF." />
+  <meta name="author" content="Vincent Murienne" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://vincent-murienne.github.io/Portfolio/cv.html" />
+
+  <!-- ===================== OPEN GRAPH ===================== -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Vincent Murienne — Portfolio" />
+  <meta property="og:title" content="CV — Vincent Murienne | Développeur Web Full-Stack" />
+  <meta property="og:description" content="Curriculum vitæ de Vincent Murienne, développeur web full-stack basé à Paris. Expériences, formations et compétences en Angular, Java Spring Boot, Node.js et TypeScript." />
+  <meta property="og:url" content="https://vincent-murienne.github.io/Portfolio/cv.html" />
+  <meta property="og:image" content="https://vincent-murienne.github.io/Portfolio/assets/images/moi.jpg" />
+  <meta property="og:image:alt" content="Vincent Murienne, développeur web full-stack" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- ===================== TWITTER CARD ===================== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CV — Vincent Murienne | Développeur Web Full-Stack" />
+  <meta name="twitter:description" content="Curriculum vitæ de Vincent Murienne, développeur web full-stack basé à Paris. Angular, Java Spring Boot, Node.js, TypeScript." />
+  <meta name="twitter:image" content="https://vincent-murienne.github.io/Portfolio/assets/images/moi.jpg" />
+
+  <!-- ===================== STRUCTURED DATA (JSON-LD) ===================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "name": "CV — Vincent Murienne",
+    "url": "https://vincent-murienne.github.io/Portfolio/cv.html",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Vincent Murienne",
+      "jobTitle": "Développeur Web Full-Stack",
+      "description": "Développeur web full-stack basé à Paris, spécialisé Angular, Java Spring Boot, Node.js et TypeScript.",
+      "url": "https://vincent-murienne.github.io/Portfolio/",
+      "knowsAbout": [
+        "Angular",
+        "Java Spring Boot",
+        "Node.js",
+        "TypeScript",
+        "JavaScript",
+        "Intelligence Artificielle",
+        "Cybersécurité"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/vincent-murienne-97a478210/",
+        "https://github.com/Vincent-Murienne",
+        "https://gitlab.com/muriennevincent"
+      ]
+    }
+  }
+  </script>
+
+  <!-- ===================== FONTS ===================== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/style.css" />
   <script>(function(){var t=localStorage.getItem('theme')||(globalThis.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.classList.toggle('dark',t==='dark')})();</script>
 </head>
@@ -20,12 +75,21 @@
         <div class="fade-in">
           <div class="flex items-end justify-between gap-6 flex-wrap">
             <div>
-              <span class="section-eyebrow" data-i18n="cv.eyebrow"></span>
+              <span class="section-eyebrow" data-i18n="cv.eyebrow">CV</span>
               <h1>Curriculum vitæ</h1>
             </div>
-            <a href="assets/files/CV_Vincent_Murienne.pdf" download title="Télécharger le CV en PDF" class="btn btn-default">
+            <!--
+              L'attribut `download` + un nom de fichier explicite améliore
+              l'UX et aide Google à identifier le PDF comme ressource téléchargeable.
+            -->
+            <a
+              href="assets/files/CV_Vincent_Murienne.pdf"
+              download="CV_Vincent_Murienne.pdf"
+              title="Télécharger le CV de Vincent Murienne en PDF"
+              class="btn btn-default"
+            >
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-              <span data-i18n="cv.download"></span>
+              <span data-i18n="cv.download">Télécharger le CV</span>
             </a>
           </div>
         </div>
@@ -35,10 +99,15 @@
     <section class="section-sm border-t pb-20">
       <div class="container">
         <div class="fade-in cv-pdf-wrapper">
+          <!--
+            title descriptif sur l'iframe : signal d'accessibilité et SEO.
+            Google utilise le title des iframes pour comprendre leur contenu.
+          -->
           <iframe
             src="assets/files/CV_Vincent_Murienne.pdf"
             class="cv-pdf-frame"
-            title="CV Vincent Murienne"
+            title="Curriculum vitæ de Vincent Murienne — Développeur Web Full-Stack"
+            loading="lazy"
           ></iframe>
         </div>
       </div>

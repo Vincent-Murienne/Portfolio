@@ -7,7 +7,7 @@ const I18N = {
     "hero.subtitle": "Je développe des applications web de bout en bout — TypeScript, Angular, Spring Boot, Node.js — et j'automatise leur livraison avec des pratiques DevOps et DevSecOps.",
     "hero.cta.projects": "Voir mes projets", "hero.cta.contact": "Me contacter",
     "about.eyebrow": "À propos", "about.title": "Quelques mots sur moi",
-    "about.p1": "Développeur web full-stack à l’aise aussi bien côté frontend (TypeScript, Angular) que backend (Spring Boot, Node.js/Express) et bases de données (PostgreSQL, MySQL, Elasticsearch). J’ai consolidé ces compétences en entreprise et tout au long de ma formation, à laquelle j’ai ajouté une dimension DevOps et DevSecOps : CI/CD, conteneurisation, virtualisation et monitoring.",
+    "about.p1": "Développeur web full-stack à l’aise aussi bien côté frontend (TypeScript, Angular) que backend (Java Spring Boot, Node.js/Express) et bases de données (PostgreSQL, MySQL, Elasticsearch). J’ai consolidé ces compétences en entreprise et tout au long de ma formation, à laquelle j’ai ajouté une dimension DevOps et DevSecOps : CI/CD, conteneurisation, virtualisation et monitoring.",
     "about.p2": "En fin d'études et à la recherche d'un CDI à partir de septembre, je cherche à rejoindre une équipe ambitieuse où je pourrai continuer à progresser. Curieux par nature, je suis de près les évolutions de l'IA et leur impact sur nos métiers et nos pratiques de développement.",
     "stack.eyebrow": "Stack", "stack.title": "Technologies que j'utilise",
     "stack.lead": "Une sélection des outils que je manipule au quotidien.",

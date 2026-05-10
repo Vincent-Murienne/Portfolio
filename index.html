@@ -3,12 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vincent Murienne — Développeur Web Full-Stack</title>
-  <meta name="description" content="Portfolio de Vincent Murienne, développeur web full-stack. React, Next.js, Node.js, TypeScript." />
+
+  <!-- ===================== SEO CORE ===================== -->
+  <title>Vincent Murienne — Développeur Web Full-Stack | Angular, Java Spring Boot, Node.js, TypeScript</title>
+  <meta name="description" content="Portfolio de Vincent Murienne, développeur web full-stack basé à Paris. Spécialisé Angular, Java Spring Boot, Node.js et TypeScript. Découvrez mes projets et compétences." />
+  <meta name="keywords" content="développeur web, full-stack, Angular, Java Spring Boot, Node.js, TypeScript, Paris, portfolio" />
+  <meta name="author" content="Vincent Murienne" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical : évite le duplicate content http vs https, avec vs sans trailing slash -->
+  <link rel="canonical" href="https://vincent-murienne.github.io/Portfolio/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vincent Murienne — Portfolio" />
+  <meta property="og:title" content="Vincent Murienne — Développeur Web Full-Stack" />
+  <meta property="og:description" content="Portfolio de Vincent Murienne, développeur web full-stack basé à Paris. Spécialisé Angular, Java Spring Boot, Node.js et TypeScript." />
+  <meta property="og:url" content="https://vincent-murienne.github.io/Portfolio/" />
+  <meta property="og:image" content="https://vincent-murienne.github.io/Portfolio/assets/images/moi.jpg" />
+  <meta property="og:image:alt" content="Vincent Murienne, développeur web full-stack" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vincent Murienne — Développeur Web Full-Stack" />
+  <meta name="twitter:description" content="Portfolio de Vincent Murienne, développeur web full-stack basé à Paris. Spécialisé Angular, Java Spring Boot, Node.js et TypeScript." />
+  <meta name="twitter:image" content="https://vincent-murienne.github.io/Portfolio/assets/images/moi.jpg" />
+
+  <!--
+    Bloc lu directement par Google sans JS.
+    Associe mon identité à mes profils LinkedIn/GitHub
+    et améliore ma présence dans les résultats enrichis.
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vincent Murienne",
+    "url": "https://vincent-murienne.github.io/Portfolio/",
+    "jobTitle": "Développeur Web Full-Stack",
+    "description": "Développeur web full-stack basé à Paris, spécialisé Angular, Java Spring Boot, Node.js et TypeScript.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Paris",
+      "addressCountry": "FR"
+    },
+    "knowsAbout": [
+      "Angular",
+      "Java Spring Boot",
+      "Node.js",
+      "TypeScript",
+      "JavaScript",
+      "Intelligence Artificielle",
+      "Cybersécurité"
+    ],
+    "sameAs": [
+      "https://github.com/Vincent-Murienne",
+      "https://linkedin.com/in/vincent-murienne"
+    ]
+  }
+  </script>
+
+  <!-- ===================== FONTS ===================== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Inline : applique le thème avant le premier paint pour éviter le flash -->
   <script>(function(){var t=localStorage.getItem('theme')||(globalThis.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.classList.toggle('dark',t==='dark')})();</script>
 </head>
 <body>
@@ -19,39 +80,66 @@
     <section class="section-hero">
       <div class="container">
         <div class="hero-grid">
+
           <!-- LEFT -->
           <div class="fade-in dir-left">
             <span class="section-eyebrow">
               <span class="badge-dot"></span>
-              <span data-i18n="hero.available"></span>
+              <!--
+                IMPORTANT SEO : on fournit un texte par défaut visible par les crawlers.
+                Le JS i18n viendra le remplacer pour les utilisateurs humains.
+                Sans ce fallback, Google voit une balise vide.
+              -->
+              <span data-i18n="hero.available">Disponible pour de nouvelles opportunités</span>
             </span>
+
+            <!--
+              H1 : balise la plus importante pour le SEO on-page.
+              Un seul H1 par page, descriptif et contenant les mots-clés cibles.
+            -->
             <h1>
-              <span data-i18n="hero.title.line1"></span><br />
-              <span class="italic font-normal text-muted" data-i18n="hero.title.line2"></span>
+              <span data-i18n="hero.title.line1">Vincent Murienne</span><br />
+              <span class="italic font-normal text-muted" data-i18n="hero.title.line2">Développeur Web Full-Stack</span>
             </h1>
+
             <p class="hero-subtitle" data-i18n="hero.subtitle">
+              Développeur passionné par Angular, Java Spring Boot, Node.js et TypeScript, basé à Paris.
             </p>
+
             <div class="hero-ctas">
               <a href="projects.html" class="btn btn-default btn-lg" id="hero-cta-projects">
-                <span data-i18n="hero.cta.projects"></span>
+                <span data-i18n="hero.cta.projects">Voir mes projets</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </a>
               <a href="contact.html" class="btn btn-outline btn-lg">
-                <span data-i18n="hero.cta.contact"></span>
+                <span data-i18n="hero.cta.contact">Me contacter</span>
               </a>
             </div>
           </div>
+
           <!-- RIGHT -->
           <div class="hero-img-col fade-in dir-right" data-delay="150">
             <div class="hero-img-wrap">
               <div class="hero-avatar">
-                <img src="assets/images/moi.jpg" alt="Vincent Murienne" onerror="this.style.display='none'" />
+                <!--
+                  alt obligatoire et descriptif : signal SEO + accessibilité.
+                  width/height évitent le CLS (Cumulative Layout Shift) → Core Web Vitals.
+                -->
+                <img
+                  src="assets/images/moi.jpg"
+                  alt="Vincent Murienne, développeur web full-stack à Paris"
+                  width="280"
+                  height="280"
+                  loading="eager"
+                  onerror="this.style.display='none'"
+                />
               </div>
               <div class="glass hero-location-badge">
                 <span class="green-dot"></span>Paris, FR
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -60,13 +148,10 @@
     <section class="section">
       <div class="container">
         <div class="fade-in">
-          <span class="section-eyebrow" data-i18n="about.eyebrow"></span>
-          <h2 data-i18n="about.title"></h2>
-          <p class="mt-4 max-w-3xl text-muted" data-i18n="about.p1">
-          </p>
-          <p class="mt-4 max-w-3xl text-muted" data-i18n="about.p2">
-            
-          </p>
+          <span class="section-eyebrow" data-i18n="about.eyebrow">À propos</span>
+          <h2 data-i18n="about.title">Qui suis-je ?</h2>
+          <p class="mt-4 max-w-3xl text-muted" data-i18n="about.p1"></p>
+          <p class="mt-4 max-w-3xl text-muted" data-i18n="about.p2"></p>
         </div>
       </div>
     </section>
@@ -77,11 +162,11 @@
         <div class="fade-in">
           <div class="card" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;padding:1.75rem 2rem">
             <div>
-              <span class="section-eyebrow" data-i18n="cv.eyebrow"></span>
-              <p class="mt-1 text-muted" data-i18n="home.cvLead"></p>
+              <span class="section-eyebrow" data-i18n="cv.eyebrow">CV</span>
+              <p class="mt-1 text-muted" data-i18n="home.cvLead">Mon parcours complet disponible en ligne.</p>
             </div>
             <a href="cv.html" class="btn btn-outline" style="white-space:nowrap;flex-shrink:0">
-              <span data-i18n="home.viewCV"></span>
+              <span data-i18n="home.viewCV">Voir mon CV</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
           </div>
@@ -93,9 +178,9 @@
     <section class="section">
       <div class="container">
         <div class="fade-in">
-          <span class="section-eyebrow" data-i18n="stack.eyebrow"></span>
-          <h2 data-i18n="stack.title"></h2>
-          <p class="mt-2 text-muted" data-i18n="stack.lead"></p>
+          <span class="section-eyebrow" data-i18n="stack.eyebrow">Stack technique</span>
+          <h2 data-i18n="stack.title">Technologies maîtrisées</h2>
+          <p class="mt-2 text-muted" data-i18n="stack.lead">Les outils que j'utilise au quotidien.</p>
         </div>
         <div class="stack-grid" id="stack-chips"></div>
       </div>
@@ -107,11 +192,11 @@
         <div class="fade-in">
           <div class="flex items-end justify-between flex-wrap gap-4 mb-10">
             <div>
-              <span class="section-eyebrow" data-i18n="projects.eyebrow"></span>
-              <h2 data-i18n="projects.featured">s</h2>
+              <span class="section-eyebrow" data-i18n="projects.eyebrow">Projets</span>
+              <h2 data-i18n="projects.featured">Projets récents</h2>
             </div>
             <a href="projects.html" class="btn btn-ghost" id="view-projects-btn">
-              <span data-i18n="home.viewProjects"></span>
+              <span data-i18n="home.viewProjects">Tous les projets</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
           </div>
@@ -126,12 +211,12 @@
         <div class="fade-in">
           <div class="flex items-end justify-between flex-wrap gap-4 mb-10">
             <div>
-              <span class="section-eyebrow" data-i18n="certs.eyebrow"></span>
-              <h2 data-i18n="certs.recent"></h2>
-              <p class="mt-2 text-muted" data-i18n="home.featuredCertsLead"></p>
+              <span class="section-eyebrow" data-i18n="certs.eyebrow">Certifications</span>
+              <h2 data-i18n="certs.recent">Certifications récentes</h2>
+              <p class="mt-2 text-muted" data-i18n="home.featuredCertsLead">Mes dernières certifications obtenues.</p>
             </div>
             <a href="certifications.html" class="btn btn-ghost" id="view-certs-btn">
-              <span data-i18n="home.viewCerts"></span>
+              <span data-i18n="home.viewCerts">Toutes les certifications</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
           </div>
@@ -145,10 +230,10 @@
       <div class="container">
         <div class="fade-in">
           <div class="cta-block">
-            <h2 data-i18n="contact.title"></h2>
-            <p data-i18n="contact.lead"></p>
+            <h2 data-i18n="contact.title">Travaillons ensemble</h2>
+            <p data-i18n="contact.lead">Ouvert aux opportunités freelance, CDI ou collaborations sur des projets ambitieux.</p>
             <a href="contact.html" class="btn btn-secondary btn-lg" style="margin-top:1.5rem;background:var(--background);color:var(--foreground)">
-              <span data-i18n="hero.cta.contact"></span>
+              <span data-i18n="hero.cta.contact">Me contacter</span>
             </a>
           </div>
         </div>

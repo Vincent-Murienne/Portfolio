@@ -3,11 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projets — Vincent Murienne</title>
-  <meta name="description" content="Projets personnels, professionnels et scolaires de Vincent Murienne." />
+
+  <!-- ===================== SEO CORE ===================== -->
+  <title>Projets — Vincent Murienne | Développeur Web Full-Stack Angular, Java Spring Boot, Node.js, TypeScript</title>
+  <meta name="description" content="Projets personnels, professionnels et scolaires de Vincent Murienne, développeur web full-stack à Paris. Applications Angular, Java Spring Boot, Node.js, TypeScript." />
+  <meta name="author" content="Vincent Murienne" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://vincent-murienne.github.io/Portfolio/projects.html" />
+
+  <!-- ===================== OPEN GRAPH ===================== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vincent Murienne — Portfolio" />
+  <meta property="og:title" content="Projets — Vincent Murienne | Développeur Web Full-Stack" />
+  <meta property="og:description" content="Projets personnels, professionnels et scolaires de Vincent Murienne, développeur web full-stack à Paris. Applications Angular, Java Spring Boot, Node.js, TypeScript." />
+  <meta property="og:url" content="https://vincent-murienne.github.io/Portfolio/projects.html" />
+  <meta property="og:image" content="https://vincent-murienne.github.io/Portfolio/assets/images/moi.jpg" />
+  <meta property="og:image:alt" content="Vincent Murienne, développeur web full-stack" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- ===================== TWITTER CARD ===================== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Projets — Vincent Murienne | Développeur Web Full-Stack" />
+  <meta name="twitter:description" content="Projets personnels, professionnels et scolaires de Vincent Murienne, développeur web full-stack à Paris." />
+  <meta name="twitter:image" content="https://vincent-murienne.github.io/Portfolio/assets/images/moi.jpg" />
+
+  <!-- ===================== STRUCTURED DATA (JSON-LD) ===================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Projets — Vincent Murienne",
+    "description": "Portfolio de projets personnels, professionnels et scolaires de Vincent Murienne, développeur web full-stack basé à Paris.",
+    "url": "https://vincent-murienne.github.io/Portfolio/projects.html",
+    "author": {
+      "@type": "Person",
+      "name": "Vincent Murienne",
+      "jobTitle": "Développeur Web Full-Stack",
+      "url": "https://vincent-murienne.github.io/Portfolio/",
+      "sameAs": [
+        "https://www.linkedin.com/in/vincent-murienne-97a478210/",
+        "https://github.com/Vincent-Murienne"
+      ]
+    }
+  }
+  </script>
+
+  <!-- ===================== FONTS ===================== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/style.css" />
   <script>(function(){var t=localStorage.getItem('theme')||(globalThis.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.classList.toggle('dark',t==='dark')})();</script>
 </head>
@@ -19,21 +64,23 @@
     <section class="section-hero">
       <div class="container">
         <div class="fade-in">
-          <span class="section-eyebrow" data-i18n="projects.eyebrow"></span>
-          <h1 data-i18n="projects.title"></h1>
+          <span class="section-eyebrow" data-i18n="projects.eyebrow">Projets</span>
+          <h1 data-i18n="projects.title">Mes projets</h1>
           <p class="mt-3 text-muted text-lg max-w-2xl" data-i18n="projects.lead">
+            Projets personnels, professionnels et scolaires développés avec Angular, Java Spring Boot, Node.js, TypeScript.
           </p>
-          <!-- Sticky category nav -->
-          <nav class="glass cat-nav" aria-label="Catégories">
-            <a href="#personal"      data-i18n="projects.cat.personal"></a>
-            <!-- <a href="#professional"  data-i18n="projects.cat.professional"></a> -->
-            <a href="#school"        data-i18n="projects.cat.school"></a>
+          <!--
+            aria-label sur la nav : signal d'accessibilité fort,
+            pris en compte par Google pour comprendre la structure de la page.
+          -->
+          <nav class="glass cat-nav" aria-label="Filtrer les projets par catégorie">
+            <a href="#personal" data-i18n="projects.cat.personal">Personnels</a>
+            <!-- <a href="#professional" data-i18n="projects.cat.professional">Professionnels</a> -->
+            <a href="#school" data-i18n="projects.cat.school">Scolaires</a>
           </nav>
         </div>
       </div>
     </section>
-
-    <!-- DYNAMIC PROJECT SECTIONS -->
     <div id="projects-content"></div>
   </main>
 
@@ -50,7 +97,7 @@
       const lang  = i18n.lang;
 
       const html = CATS.map(cat => {
-        const list = PROJECTS.filter(p => p.cat === cat);
+        const list  = PROJECTS.filter(p => p.cat === cat);
         const cards = list.map((p, i) => renderProjectCard(p, i * 80)).join("");
         const count = String(list.length).padStart(2, "0") + " /" + String(total).padStart(2, "0");
 

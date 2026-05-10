@@ -3,11 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Vincent Murienne</title>
-  <meta name="description" content="Contacter Vincent Murienne, développeur web full-stack." />
+
+  <!-- ===================== SEO CORE ===================== -->
+  <title>Contact — Vincent Murienne | Développeur Web Full-Stack à Paris</title>
+  <meta name="description" content="Contactez Vincent Murienne, développeur web full-stack basé sur Paris. Disponible pour CDI. Email, LinkedIn, GitHub." />
+  <meta name="author" content="Vincent Murienne" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://vincent-murienne.github.io/Portfolio/contact.html" />
+
+  <!-- ===================== OPEN GRAPH ===================== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vincent Murienne — Portfolio" />
+  <meta property="og:title" content="Contact — Vincent Murienne | Développeur Web Full-Stack" />
+  <meta property="og:description" content="Contactez Vincent Murienne, développeur web full-stack basé sur Paris. Disponible pour CDI." />
+  <meta property="og:url" content="https://vincent-murienne.github.io/Portfolio/contact.html" />
+  <meta property="og:image" content="https://vincent-murienne.github.io/Portfolio/assets/images/moi.jpg" />
+  <meta property="og:image:alt" content="Vincent Murienne, développeur web full-stack" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- ===================== TWITTER CARD ===================== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact — Vincent Murienne | Développeur Web Full-Stack" />
+  <meta name="twitter:description" content="Contactez Vincent Murienne, développeur web full-stack basé sur Paris. Disponible pour CDI." />
+  <meta name="twitter:image" content="https://vincent-murienne.github.io/Portfolio/assets/images/moi.jpg" />
+
+  <!-- ===================== STRUCTURED DATA (JSON-LD) ===================== -->
+  <!--
+    ContactPage + Person : indique à Google que cette page est une page de contact
+    associée à une personne physique identifiée. Les informations (email, profils sociaux) sont directement exploitables pour les rich results.
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact — Vincent Murienne",
+    "url": "https://vincent-murienne.github.io/Portfolio/contact.html",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Vincent Murienne",
+      "jobTitle": "Développeur Web Full-Stack",
+      "email": "muriennevincent@gmail.com",
+      "url": "https://vincent-murienne.github.io/Portfolio/",
+      "sameAs": [
+        "https://www.linkedin.com/in/vincent-murienne-97a478210/",
+        "https://github.com/Vincent-Murienne",
+        "https://gitlab.com/muriennevincent"
+      ]
+    }
+  }
+  </script>
+
+  <!-- ===================== FONTS ===================== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/style.css" />
   <script>(function(){var t=localStorage.getItem('theme')||(globalThis.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.classList.toggle('dark',t==='dark')})();</script>
 </head>
@@ -19,9 +69,11 @@
     <section class="section-hero">
       <div class="container">
         <div class="fade-in">
-          <span class="section-eyebrow" data-i18n="contact.eyebrow"></span>
-          <h1 data-i18n="contact.title"></h1>
-          <p class="mt-3 text-muted text-lg max-w-2xl" data-i18n="contact.lead"></p>
+          <span class="section-eyebrow" data-i18n="contact.eyebrow">Contact</span>
+          <h1 data-i18n="contact.title">Travaillons ensemble</h1>
+          <p class="mt-3 text-muted text-lg max-w-2xl" data-i18n="contact.lead">
+            Disponible pour des missions freelance, un CDI ou des collaborations sur des projets ambitieux.
+          </p>
         </div>
       </div>
     </section>
@@ -52,7 +104,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12.41a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 </span>
                 <div>
-                  <div class="font-mono text-xs uppercase tracking-wider text-muted" data-i18n="contact.phone"></div>
+                  <div class="font-mono text-xs uppercase tracking-wider text-muted" data-i18n="contact.phone">Téléphone</div>
                   <div class="text-sm font-medium mt-1">07.81.96.30.94</div>
                 </div>
               </div>
@@ -99,7 +151,8 @@
                 src="https://maps.google.com/maps?q=150+Rue+Gallieni+92100+Boulogne-Billancourt+France&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 class="map-iframe"
                 allowfullscreen=""
-                title="150 Rue Gallieni, 92100 Boulogne-Billancourt"
+                loading="lazy"
+                title="Localisation de Vincent Murienne — 150 Rue Gallieni, 92100 Boulogne-Billancourt"
               ></iframe>
             </div>
             <a
@@ -109,7 +162,7 @@
               class="map-external-link"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-              <span data-i18n="contact.openMap"></span>
+              <span data-i18n="contact.openMap">Ouvrir dans Google Maps</span>
             </a>
           </div>
 
