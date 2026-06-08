@@ -31,7 +31,7 @@ const PROJECTS = [
   {
     id: "p2", cat: "personal",
     title: { fr: "BeatZone", en: "BeatZone" },
-    desc:  { fr: "Application web & mobile pour découvrir les concerts près de soi, organiser des événements et partager ses dates d’artiste.", en: "Web & mobile application to discover concerts near you, organize events and share your artist dates." },
+    desc:  { fr: "Application web et mobile dédiée aux événements musicaux en France, permettant la découverte et l’organisation d’événements ainsi que la mise en relation avec des artistes.", en: "Web and mobile application dedicated to musical events in France, allowing the discovery and organization of events as well as connecting with artists." },
     tags: ["TypeScript", "Stripe", "PostgreSQL", "MapBox", "Supabase", "React Native", "Node.Js", "Fastify", "Vite", "TanStack Query", "Tailwind CSS", "Docker"], year: 2025, repo: "https://github.com/Vincent-Murienne/BeatZone",
     status: "in-progress", icon: "sparkles", img: "assets/images/projet/personnel/beatzone.png",
   },
@@ -80,7 +80,7 @@ const PROJECTS = [
   {
     id: "s1", cat: "school",
     title: { fr: "Horizon BP", en: "Horizon BP" },
-    desc:  { fr: "Projet de fin d’année M2 — application bancaire mobile pour les 18–35 ans combinant gestion de budget, apprentissage financier et impact écologique.", en: "Final year M2 project — mobile banking application for 18–35 year olds combining budget management, financial learning and ecological impact." },
+    desc:  { fr: "Projet de fin d’études de Mastère 2 – Application bancaire mobile destinée aux 18–35 ans : gestion de compte, virements, suivi des opérations, gestion budgétaire, sensibilisation financière et impact écologique.", en: "Final year M2 project — Mobile banking application for 18-35 year olds: account management, transfers, transaction tracking, budget management, financial awareness and environmental impact." },
     tags: ["Java Spring Boot", "React Native", "Docker", "Keycloak", "TrueLayer"], year: 2026, repo: "https://gitlab.com/adrien.houede/horizon-bp",
     status: "in-progress", icon: "smartphone", img: "assets/images/projet/scolaire/horizon-bp.png",
   },
