@@ -1,8 +1,12 @@
 const STACK = [
   { name: "TypeScript",       category: "Language" },
+  { name: "JavaScript",       category: "Language" },
   { name: "Python",           category: "Language" },
   { name: "Angular",          category: "Frontend" },
+  { name: "React",            category: "Frontend" },
+  { name: "React Native",     category: "Frontend" },
   { name: "HTML5",            category: "Frontend" },
+  { name: "CSS3",             category: "Frontend" },
   { name: "CSS3",             category: "Frontend" },
   { name: "Node.js",          category: "Backend" },
   { name: "Express",          category: "Backend" },
@@ -15,6 +19,8 @@ const STACK = [
   { name: "Grafana",          category: "DevOps" },
   { name: "Microsoft Azure",  category: "Cloud" },
   { name: "Git",              category: "Tools" },
+  { name: "GitHub",           category: "Tools" },
+  { name: "GitLab",           category: "Tools" },
 ];
 
 
