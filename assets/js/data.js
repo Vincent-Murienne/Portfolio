@@ -88,7 +88,7 @@ const PROJECTS = [
     title: { fr: "Horizon BP", en: "Horizon BP" },
     desc:  { fr: "Projet de fin d’études de Mastère 2 – Application bancaire mobile destinée aux 18–35 ans : gestion de compte, virements, suivi des opérations, gestion budgétaire, sensibilisation financière et impact écologique.", en: "Final year M2 project — Mobile banking application for 18-35 year olds: account management, transfers, transaction tracking, budget management, financial awareness and environmental impact." },
     tags: ["Java Spring Boot", "React Native", "Docker", "Keycloak", "TrueLayer"], year: 2026, repo: "https://gitlab.com/adrien.houede/horizon-bp",
-    status: "in-progress", icon: "smartphone", img: "assets/images/projet/scolaire/horizon-bp.png",
+    status: "done", icon: "smartphone", img: "assets/images/projet/scolaire/horizon-bp.png",
   },
   {
     id: "s2", cat: "school",
