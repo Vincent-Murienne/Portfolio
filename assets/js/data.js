@@ -46,7 +46,7 @@ const PROJECTS = [
     title: { fr: "Pokemon Ultimate", en: "Pokemon Ultimate" },
     desc:  { fr: "REMAKE : Jeu Pokémon avec une nouvelle histoire et de nouvelles cartes, une difficulté accrue, incluant tous les dresseurs et Pokémon de toutes les générations.", en: "REMAKE: Pokémon game with a new story and new cards, increased difficulty, including all trainers and Pokémon from all generations." },
     tags: ["RPG Maker XP", "Ruby"], year: 2025, repo: "https://github.com/Vincent-Murienne/pokemon-ultimate",
-    status: "in-progress", icon: "gamepad2", img: "assets/images/projet/personnel/pokemon-ultimate.png",
+    status: "planned", icon: "gamepad2", img: "assets/images/projet/personnel/pokemon-ultimate.png",
   },
   {
     id: "p4", cat: "personal",
